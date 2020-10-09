@@ -10,6 +10,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/d744bf4268.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="css/stylesheet.css">
 
     <title>FoodFind</title>
@@ -22,7 +23,7 @@
 
 		<!-- Icon -->
 		<div class='fadeIn first'>
-			<img src='http://danielzawadzki.com/codepen/01/icon.svg' id='icon' alt='User Icon' />
+			<i class='fas fa-carrot fa-3x'></i>
 		</div>
 
 		<!-- Login Form -->
