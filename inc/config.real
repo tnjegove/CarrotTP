@@ -1,0 +1,7 @@
+<?php
+
+define("SERVER_NAME","sql300.epizy.com");
+define("USERNAME","epiz_26910911");
+define("PASSWORD","0gA2E74mYnlAnV5");
+define("DATABASE","epiz_26910911_foodfindDB");
+

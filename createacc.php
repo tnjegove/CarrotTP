@@ -10,46 +10,34 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-	<script src="https://kit.fontawesome.com/d744bf4268.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="css/stylesheet.css">
 
     <title>FoodFind</title>
   </head>
   <body>
     <div class="wrapper fadeInDown">
-		<?php
-		if(!isset($_SESSION['login'])) {
-			echo
-		"<div id='formContent'>
+		
+		<div id='formContent'>
 		<!-- Tabs Titles -->
 
 		<!-- Icon -->
 		<div class='fadeIn first'>
-			<i class='fas fa-carrot fa-3x'></i>
+			<img src='http://danielzawadzki.com/codepen/01/icon.svg' id='icon' alt='User Icon' />
 		</div>
 
 		<!-- Login Form -->
-		<form action='inc/login.php' method='POST'>
+		<form action='inc/create_account.php' method='POST'>
 			<input type='text' id='login' class='fadeIn second' name='login' placeholder='login'>
 			<input type='password' id='user_pass' class='fadeIn third' name='user_pass' placeholder='password'>
-			<input type='submit' class='fadeIn fourth' value='Log In'>
+			<input type='submit' class='fadeIn fourth' value='Create account'>
 		</form>
 
 		<!-- Create account -->
 		<div id='formFooter'>
-			<a class='underlineHover' href='createacc.php'>Create account</a>
+			<a class='underlineHover' href='index.php'>Sign in</a>
 		</div>
 
-		</div>";}
-		else {
-			echo '<p>Welcome back, '.$_SESSION['login'].'!</p>
-			<form action="inc/signout.php">
-				<input type="submit" class="fadeIn fourth" value="Log out">
-			</form>
-			';
-			
-		}
-		?>
+		</div>
 	</div>
 
     <!-- Optional JavaScript -->
