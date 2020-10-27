@@ -1,4 +1,3 @@
-
 			<?php
 				if(ISSET($_REQUEST['firstname']) && ISSET($_REQUEST['lastname']) && ISSET($_REQUEST['email'])){
 			?>
