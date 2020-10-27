@@ -1,3 +1,8 @@
+<html>
+<head>
+<title>Email Validation:</title>
+</head>
+<body>
 			<?php
 				if(ISSET($_REQUEST['firstname']) && ISSET($_REQUEST['lastname']) && ISSET($_REQUEST['email'])){
 			?>
@@ -9,3 +14,5 @@
 			<?php
 				}
 			?>
+</body>
+</html>
