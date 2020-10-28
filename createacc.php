@@ -28,8 +28,8 @@
 
 		<!-- Login Form -->
 		<form action='inc/create_account.php' method='POST'>
-			<input type='text' id='login' class='fadeIn second' name='login' placeholder='login'>
-			<input type='password' id='user_pass' class='fadeIn third' name='user_pass' placeholder='password'>
+			<input type='text' id='login' class='fadeIn second' name='login' placeholder='login' required>
+			<input type='password' id='user_pass' class='fadeIn third' name='user_pass' placeholder='password' required>
 			<input type='submit' class='fadeIn fourth' value='Create account'>
 		</form>
 
