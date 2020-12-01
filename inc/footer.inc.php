@@ -1,33 +1,32 @@
 <!-- Optional JavaScript -->
 	<footer class='text-center'>
-		<nav class='navbar navbar-inverse'>
-			<div class='container'>
-			
-					
-						<div class='col-md-6 mx-auto'>
-							<ul class='nav navbar-nav'>
-								
-								<li class='nav-item'><i class="fab fa-twitter"></i></li>
-								<li class='nav-item'><i class="fab fa-facebook-f"></i></li>
-								<li class='nav-item'><i class="fab fa-linkedin-in"></i></li>
-								<li class='navbar-text'>©FoodFind 2020</li>
-							</ul>
-							
-							
-							
-							
-						</div>
-					
-					
-					
-					
+		<div class='container'>
+	
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<a class="navbar-brand" href="#">©FoodFind 2020</a>
 				
-			
-			
+
 				
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#"><i class="fab fa-linkedin-in"></i></a>
+					</li>
+					
+					
+				</ul>
+				
+				<ul class='navbar-nav navbar-right'>
+					
+				</ul>
 			
-			</div>
-		</nav>
+			</nav>
+		</div>		
 		
 	
 	</footer>

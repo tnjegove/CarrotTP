@@ -80,40 +80,46 @@
 	</div>
 	</div>
 	</div>
-	<div id='results'>
-	<div class='row'>
-		<div class='container'>
-			<form>
-			  <div class="form-group">
-				<label for="formGroupExampleInput">Example label</label>
-				<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-				<button class='btn btn-outline-success my-2 my-sm-0' type='submit'>Search</button>
-			  </div>
-			  
-			</form>
+	<div class='col-lg-12' id='results'>
+		<div class='row' id='white-space'>
 		
 		</div>
-	</div>
-	<div  class='row'>
-		<div class='mx-auto col-md-10'>
-			<div class='row'>Recently searched</div>
-			<div class='row'>
-				<div class='col-md-12'>
-					<div class='thumbnail'>Result 1</div>
+		<div class='row'>
+			
+				  
+					<div class='col-lg-2'>
+						<label for="formGroupExampleInput">Search recipes</label>
+					</div>
+					<div class='col-lg-8'>
+						<input type="text" class="form-control" id="search-input" placeholder="Example input placeholder">
+					</div>
+					<div class='col-lg-2'>
+						<button id='btn_search-recipes' class='btn btn-outline-success my-2 my-sm-0' type='button'>Search</button>
+					</div>
+				  
+				  
+				
+		</div>
+		<div  class='row'>
+			<div class='mx-auto col-md-10'>
+				<div class='row'>Recently searched</div>
+				<div class='row'>
+					<div class='col-md-12'>
+						<div class='thumbnail'>Result 1</div>
+					</div>
 				</div>
-			</div>
-			<div class='row'>
-				<div class='col-md-12'>
-					<div class='thumbnail'>Result 2</div>
+				<div class='row'>
+					<div class='col-md-12'>
+						<div class='thumbnail'>Result 2</div>
+					</div>
 				</div>
-			</div>
-			<div class='row'>
-				<div class='col-md-12'>
-					<div class='thumbnail'>Result 3</div>
+				<div class='row'>
+					<div class='col-md-12'>
+						<div class='thumbnail'>Result 3</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 	</div>
 	</div>
 
