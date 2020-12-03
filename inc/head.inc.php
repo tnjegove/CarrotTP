@@ -51,16 +51,19 @@
 			
 			<ul class='navbar-nav navbar-right'>
 				<?php
-					if(!isset($_SESSION['login'])) { echo
-					"<li class='nav-item '><button id='btn_signin' class='btn btn-outline-success my-2 my-sm-0' type='submit'><i class='fas fa-sign-in-alt'></i> Sign in</button></li>
-					<li class='nav-item'>&nbsp&nbsp&nbsp</li>
-					<li class='nav-item '><button id='btn_register' class='btn btn-outline-success my-2 my-sm-0' type='submit'><i class='fas fa-user-plus'></i> Register</button></li>";}
+					if(!isset($_SESSION['login'])) { 
+						echo "
+							<li class='nav-item '><button id='btn_signin' class='btn btn-outline-success my-2 my-sm-0' type='submit'><i class='fas fa-sign-in-alt'></i> Sign in</button></li>
+							<li class='nav-item'>&nbsp&nbsp&nbsp</li>
+							<li class='nav-item '><button id='btn_register' class='btn btn-outline-success my-2 my-sm-0' type='submit'><i class='fas fa-user-plus'></i> Register</button></li>
+						";}
 					else {
 						echo "
-							<li class='nav-item '><button id='btn_signout' class='btn btn-outline-success my-2 my-sm-0' type='submit'><i class='fas fa-sign-out-alt></i> Sign out</button></li>
+							<li class='nav-item'><p>Welcome back, ".$_SESSION['login']."!</p> </li>
+							<li class='nav-item'>&nbsp&nbsp&nbsp</li>
+							<li class='nav-item '><a href='inc/signout.php'><button id='btn_signout' class='btn btn-outline-success my-2 my-sm-0' type='submit'><i class='fas fa-sign-out-alt'></i> Sign out</button></a></li>
 						
-						";
-					}
+						";}
 				?>
 			</ul>
 		</div>

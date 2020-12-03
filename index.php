@@ -1,12 +1,10 @@
 <?php
 		include 'inc/head.inc.php';
-	?>
-  
-    <div id="loginWindow" class="wrapper fadeInDown" style="display: none;">
-		<?php
+	
 		if(!isset($_SESSION['login'])) {
 			echo
-		"<div id='formContent'>
+		"<div id='loginWindow' class='wrapper fadeInDown' style='display: none;'>
+		<div id='formContent'>
 		<!-- Tabs Titles -->
 
 		<!-- Icon -->
@@ -26,17 +24,45 @@
 			<a class='underlineHover' href='createacc.php'>Create account</a>
 		</div>
 
-		</div>";}
-		else {
-			echo '<p>Welcome back, '.$_SESSION['login'].'!</p>
+		</div></div>
+		<div id='registerWindow' class='wrapper fadeInDown' style='display: none;'>
+		
+		<div id='formContent'>
+		<!-- Tabs Titles -->
+
+		<!-- Icon -->
+		<div class='fadeIn first'>
+			<i class='fas fa-carrot fa-3x'></i>
+		</div>
+
+		<!-- Login Form -->
+		<form action='inc/create_account.php' method='POST'>
+			<input type='text' id='login' class='fadeIn second' name='login' placeholder='login' required>
+			<input type='password' id='user_pass' class='fadeIn third' name='user_pass' placeholder='password' required>
+			<input type='submit' class='fadeIn fourth' value='Create account'>
+		</form>
+
+		<!-- Create account -->
+		<div id='formFooter'>
+			<a class='underlineHover' href='index.php'>Sign in</a>
+		</div>
+
+		</div>
+	</div>";}
+		/*else {
+			echo '
+			
+			<p>Welcome back, '.$_SESSION['login'].'!</p>
 			<form action="inc/signout.php">
 				<input type="submit" class="fadeIn fourth" value="Log out">
 			</form>
+			
 			';
 			
-		}
+		}*/
 		?>
-	</div>
+	
+	
 	<div class='container'>
 	<div class='row carousel-holder'>
 	<div class='col-md-12'>
@@ -99,6 +125,9 @@
 				  
 				  
 				
+		</div>
+		<div class='row' id='white-space'>
+		
 		</div>
 		<div  class='row'>
 			<div class='mx-auto col-md-10'>
