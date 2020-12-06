@@ -32,29 +32,49 @@ $(document).ready(function(){
 	
 	
 	
+	// Meal and ingredient button
 	
-	
-	$("#btn_search-recipes").click(function() {
-		var var_ingredients = $("#search-input").val();
-		//alert(var_ingredients);
-		$.ajax({
-			type: "POST",
-			url: "inc/getRecipeByIngredient.php",
-			data: {ingredients: var_ingredients},
-			dataType: "text",
-			success: function(data) {
-				alert("Success:"+data);
-				
-			},
-			
-			error: function(xhr, status, error){
-				var errorMessage = xhr.status + ': ' + xhr.statusText
-				alert('Error - ' + errorMessage);
-			}
-
-			
-		});
+	$("#btn_searchRecipeNameAndIngredient").click(function() {
 		
+		let searchMeal = $("#searchMeal").val();
+		let searchIngredient = $("#searchIngredient").val();
+		
+		$.ajax({
+			type: "GET",
+			url: `https://api.spoonacular.com/recipes/complexSearch?apiKey=19b7bc50271f4b7f91e89b5aea652636&includeIngredients=${searchIngredient}&query=${searchMeal}`,
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		}).done(function(data) {				  
+			$('#totalResults').text(data.totalResults);
+			$('#listResults tbody').html('');
+	  
+			$(data.results).each(function(index, recipe){
+				let tableRow = `<tr><td><img src=\"${recipe.image}\" /></td><td>${recipe.title}</td><td>Recipe ID,  (${recipe.id})</td></tr>`;
+				$('#listResults tbody').append(tableRow);
+			});
+		});
 	});
 	
+	// Recipe button
+	
+	$("#btn_searchRecipeId").click(function() {
+		
+		var searchRecipeId = $("#searchRecipeId").val();
+		
+		$.ajax({
+			type: "GET",
+			url: `https://api.spoonacular.com/recipes/${searchRecipeId}/analyzedInstructions?apiKey=19b7bc50271f4b7f91e89b5aea652636`,
+			headers: {
+				'Content-Type': 'application/json'
+			}	
+		}).done(function(data) {
+			$(data).each(function(index, recipe){
+				$(recipe.steps).each(function(index, step){
+					let tableRow = `<tr><td>${step.number}</td><td>${step.step}</td><tr>`;
+					$('#listRecipe tbody').append(tableRow);
+				});
+			});
+		});
+	});
 });

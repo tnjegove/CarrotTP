@@ -110,45 +110,78 @@
 		<div class='row' id='white-space'>
 		
 		</div>
-		<div class='row'>
-			
-				  
-					<div class='col-lg-2'>
-						<label for="formGroupExampleInput">Search recipes</label>
-					</div>
-					<div class='col-lg-8'>
-						<input type="text" class="form-control" id="search-input" placeholder="Example input placeholder">
-					</div>
-					<div class='col-lg-2'>
-						<button id='btn_search-recipes' class='btn btn-outline-success my-2 my-sm-0' type='button'>Search</button>
-					</div>
-				  
-				  
-				
-		</div>
-		<div class='row' id='white-space'>
 		
+		<!-- Enter meal name and ingredient-->
+		
+		<div class='row'>
+			<div class='col-lg-2'>
+				<label for="formGroupExampleInput">Search recipe names and ingredients</label>
+			</div>
+			<div class='col-lg-8'>
+				<input type="text" class="form-control" id="searchMeal" placeholder="Enter meal name">
+				<input type="text" class="form-control" id="searchIngredient" placeholder="Enter ingredient name">
+			</div>
+			<div class='col-lg-2'>
+				<br>
+				<button id='btn_searchRecipeNameAndIngredient' class='btn btn-outline-success my-2 my-sm-0' type='button'>Search</button>
+			</div>		
 		</div>
-		<div  class='row'>
-			<div class='mx-auto col-md-10'>
-				<div class='row'>Recently searched</div>
-				<div class='row'>
-					<div class='col-md-12'>
-						<div class='thumbnail'>Result 1</div>
-					</div>
-				</div>
-				<div class='row'>
-					<div class='col-md-12'>
-						<div class='thumbnail'>Result 2</div>
-					</div>
-				</div>
-				<div class='row'>
-					<div class='col-md-12'>
-						<div class='thumbnail'>Result 3</div>
-					</div>
-				</div>
+		<br>
+		
+		<!-- Enter recipe id -->
+		
+		<div class='row'>
+			<div class='col-lg-2'>
+				<label for="formGroupExampleInput">Search recipe id's</label>
+			</div>
+			<div class='col-lg-8'>
+				<input type="text" class="form-control" id="searchRecipeId" placeholder="Enter Recipe Id">
+			</div>
+			<div class='col-lg-2'>
+				<button id='btn_searchRecipeId' class='btn btn-outline-success my-2 my-sm-0' type='button'>Search</button>
 			</div>
 		</div>
+		
+		<div class='row' id='white-space'>
+		</div>
+		
+		<!-- Results/MealAndIngredient -->
+		
+		Total results: <span id="totalResults">0</span>
+		
+		<table id="listResults">
+			<thead>
+				<tr>
+					<th>Image, </th>
+					<th>Recipe Name, </th>
+					<th>Actions.</th>
+				<tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				<tr>
+			</tbody>
+		</table>
+
+		<!-- Results/MealAndIngredient -->
+
+		<table id="listRecipe">
+			<thead>
+				<tr>
+					<th>Step, </th>
+					<th>Instruction. </th>
+				<tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td></td>
+					<td></td>
+				<tr>
+			</tbody>
+		</table>
 	</div>
 	</div>
 
