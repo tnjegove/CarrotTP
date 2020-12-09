@@ -149,6 +149,31 @@
 		
 		Total results: <span id="totalResults">0</span>
 		
+		<div class='row'>
+			<div class='col-lg-4'>
+				<label for="Image"><b>Image,</b></label>
+			</div>
+			<div class='col-lg-4'>
+				<label for="Title"><b>Title,</b></label>
+			</div>
+			<div class='col-lg-4'>
+				<label for="Recipe-ID"><b>Recipe-ID</b></label>
+			</div>
+		</div>
+
+		<div class='row'>
+			<div class='col-lg-4'>
+				<label for="ImageResult"></label>
+			</div>
+			<div class='col-lg-4'>
+				<label for="TitleResult"></label>
+			</div>
+			<div class='col-lg-4'>
+				<label for="Recipe-IDResult"></label>
+			</div>
+		</div>
+
+		<!--
 		<table id="listResults">
 			<thead>
 				<tr>
@@ -165,23 +190,27 @@
 				<tr>
 			</tbody>
 		</table>
+		-->
 
 		<!-- Results/MealAndIngredient -->
 
-		<table id="listRecipe">
-			<thead>
-				<tr>
-					<th>Step, </th>
-					<th>Instruction. </th>
-				<tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td></td>
-					<td></td>
-				<tr>
-			</tbody>
-		</table>
+		<div class='row'>
+			<div class='col-lg-2'>
+				<label for="Image"><b>Step,</b></label>
+			</div>
+			<div class='col-lg-10'>
+				<label for="Title"><b>Instruction</b></label>
+			</div>
+		</div>
+
+		<div class='row'>
+			<div class='col-lg-2'>
+				<label for="StepResult"></label>
+			</div>
+			<div class='col-lg-10'>
+				<label for="InstructionResult"></label>
+			</div>
+		</div>
 	</div>
 	</div>
 

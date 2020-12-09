@@ -35,6 +35,37 @@ $(document).ready(function(){
 	// Meal and ingredient button
 	
 	$("#btn_searchRecipeNameAndIngredient").click(function() {
+
+		var $searchMeal = $('#searchMeal');
+		var $searchIngredient = $('#searchIngredient');
+
+		$.ajax({
+			type: 'POST',
+			url: 'inc/getRecipeByIngredient.php',
+			data: {
+				searchMeal: $searchMeal.val(),
+				searchIngredient: $searchIngredient.val(),
+			},
+			success: function(results){
+				alert('The package has been posted:'+results);
+				var select1 = document.getElementById('results.image');
+				var select1 = document.getElementById('results.title');
+				var select1 = document.getElementById('results.id');
+				$(select1).html('');
+				$(select2).html('');
+				$(select3).html('');
+				for (var i in results) {
+					$(select).append('<option value=' + data[i] + '>' + data[i] + '</option>'); // for every index create HTML as follows and append to #routes	
+				}
+			},
+			error: function(){
+				alert('The package has not been posted');
+			}
+		});
+	});
+
+	/*
+	$("#btn_searchRecipeNameAndIngredient").click(function() {
 		
 		let searchMeal = $("#searchMeal").val();
 		let searchIngredient = $("#searchIngredient").val();
@@ -48,13 +79,13 @@ $(document).ready(function(){
 		}).done(function(data) {				  
 			$('#totalResults').text(data.totalResults);
 			$('#listResults tbody').html('');
-	  
 			$(data.results).each(function(index, recipe){
 				let tableRow = `<tr><td><img src=\"${recipe.image}\" /></td><td>${recipe.title}</td><td>Recipe ID,  (${recipe.id})</td></tr>`;
 				$('#listResults tbody').append(tableRow);
 			});
 		});
 	});
+	*/
 	
 	// Recipe button
 	
