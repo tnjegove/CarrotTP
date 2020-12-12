@@ -49,20 +49,9 @@
 
 		</div>
 	</div>";}
-		/*else {
-			echo '
-			
-			<p>Welcome back, '.$_SESSION['login'].'!</p>
-			<form action="inc/signout.php">
-				<input type="submit" class="fadeIn fourth" value="Log out">
-			</form>
-			
-			';
-			
-		}*/
-		?>
-	
-	
+
+	?>
+		
 	<div class='container'>
 	<div class='row carousel-holder'>
 	<div class='col-md-12'>
@@ -111,7 +100,7 @@
 		
 		</div>
 		
-		<!-- Enter meal name and ingredient-->
+		<!-- Enter meal name and ingredient / Darragh O'Brien -->
 		
 		<div class='row'>
 			<div class='col-lg-2'>
@@ -128,7 +117,7 @@
 		</div>
 		<br>
 		
-		<!-- Enter recipe id -->
+		<!-- Enter recipe id / Darragh O'Brien -->
 		
 		<div class='row'>
 			<div class='col-lg-2'>
@@ -145,70 +134,23 @@
 		<div class='row' id='white-space'>
 		</div>
 		
-		<!-- Results/MealAndIngredient -->
-		
-		Total results: <span id="totalResults">0</span>
+		<!-- Results/MealAndIngredient / Darragh O'Brien -->
 		
 		<div class='row'>
-			<div class='col-lg-4'>
-				<label for="Image"><b>Image,</b></label>
-			</div>
-			<div class='col-lg-4'>
-				<label for="Title"><b>Title,</b></label>
-			</div>
-			<div class='col-lg-4'>
-				<label for="Recipe-ID"><b>Recipe-ID</b></label>
+			<div class='col-lg-12'>
+				<table id="listResults">
+
+				</table>
 			</div>
 		</div>
 
-		<div class='row'>
-			<div class='col-lg-4'>
-				<label for="ImageResult"></label>
-			</div>
-			<div class='col-lg-4'>
-				<label for="TitleResult"></label>
-			</div>
-			<div class='col-lg-4'>
-				<label for="Recipe-IDResult"></label>
-			</div>
-		</div>
-
-		<!--
-		<table id="listResults">
-			<thead>
-				<tr>
-					<th>Image, </th>
-					<th>Recipe Name, </th>
-					<th>Actions.</th>
-				<tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-				<tr>
-			</tbody>
-		</table>
-		-->
-
-		<!-- Results/MealAndIngredient -->
+		<!-- Results/RecipeList / Darragh O'Brien -->
 
 		<div class='row'>
-			<div class='col-lg-2'>
-				<label for="Image"><b>Step,</b></label>
-			</div>
-			<div class='col-lg-10'>
-				<label for="Title"><b>Instruction</b></label>
-			</div>
-		</div>
+			<div class='col-lg-12'>
+				<table id="listResults2">
 
-		<div class='row'>
-			<div class='col-lg-2'>
-				<label for="StepResult"></label>
-			</div>
-			<div class='col-lg-10'>
-				<label for="InstructionResult"></label>
+				</table>
 			</div>
 		</div>
 	</div>

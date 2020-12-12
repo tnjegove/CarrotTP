@@ -1,21 +1,35 @@
+<!-- 1st Post request to public API / Darragh O'Brien -->
+
 <?php
 	$searchMeal=$_POST['searchMeal'];
 	$searchIngredient=$_POST['searchIngredient'];
 	$apiLink = "https://api.spoonacular.com/recipes/complexSearch?apiKey=19b7bc50271f4b7f91e89b5aea652636&includeIngredients=${searchIngredient}&query=${searchMeal}";
 	$data = file_get_contents($apiLink);
 	$json = json_decode($data,true);
-	$result_array = array();
+
+	$htmlToShow = "<thead>
+	<tr>
+		<th>Image</th>
+		<th>Title</th>
+		<th>Recipe Id</th>
+	<tr>
+	</thead>";
+	$htmlToShow = $htmlToShow . '<tbody>';
+
+	//use for loop here
 	for ($i=0;$i<count($json["results"]);$i++) {
-		$result_array[$i][0]=$json["results"][$i]["image"];
-		$result_array[$i][1]=$json["results"][$i]["title"];
-		$result_array[$i][2]=$json["results"][$i]["id"];
+
+		$htmlToShow = $htmlToShow . '<tr>'; 
+
+		$htmlToShow = $htmlToShow . '<td>' . '<img src="' . $json["results"][$i]["image"] . '"/>'. '</td>';
+		$htmlToShow = $htmlToShow . '<td>' . $json["results"][$i]["title"] . '</td>';
+		$htmlToShow = $htmlToShow . '<td>' . $json["results"][$i]["id"] . '</td>';
+
+		$htmlToShow = $htmlToShow . '</tr>'; 
 	}
 
-	for ($i=0;$i<count($json["results"]);$i++) {
-		echo ''.$result_array[$i][0].''.$result_array[$i][1].''.$result_array[$i][2].'';
-		echo '<div class="row">
+	$htmlToShow = $htmlToShow . '</tbody>';
 
-		</div>'
-	}	
+	echo $htmlToShow;
 ?>
 	
