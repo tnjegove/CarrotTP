@@ -7,41 +7,44 @@
 	
 	$json_array = json_decode($data,true);
 
-	$htmlToShow = "<thead>
-		<tr>
-			<th>Number</th>
-			<th>Step</th>
-			<th>Igredient(s)</th>
-		<tr>
-	</thead>";
+	$htmlToShow = '<div class="row container">
+		
+			<div class="col-lg-4">Number</div>
+			<div class="col-lg-4">Step</div>
+			<div class="col-lg-4">Igredient(s)</div>
+		
+	</div>';
 
-	$htmlToShow = $htmlToShow . '<tbody>';
+	//$htmlToShow = $htmlToShow . '<tbody>';
 
 	foreach($json_array as $receipe){
 		$steps = $receipe['steps'];
 
 		foreach($steps as $innersteps){
 
-			$htmlToShow = $htmlToShow . '<tr>'; 
+			$htmlToShow = $htmlToShow . '<div class="row container">'; 
 
-			$htmlToShow = $htmlToShow . '<td>' . $innersteps['number'] .'</td>'; //steps.number
-			$htmlToShow = $htmlToShow . '<td>' . $innersteps['step'] .'</td>'; //steps.number
+			$htmlToShow = $htmlToShow . '<div class="col-lg-4">' . $innersteps['number'] .'</div>'; //steps.number
+			$htmlToShow = $htmlToShow . '<div class="col-lg-4">' . $innersteps['step'] .'</div>'; //steps.number
 
 
 			$ingredients = $innersteps['ingredients'];
 
-			$htmlToShow = $htmlToShow . '<td>';
+			$htmlToShow = $htmlToShow . '<div class="col-lg-4">';
 				foreach($ingredients as $smt){
 					$htmlToShow = $htmlToShow . $smt['name'] . ',';
 				}	
-			$htmlToShow = $htmlToShow . '</td>';
+			$htmlToShow = $htmlToShow . '</div>';
 
-			$htmlToShow = $htmlToShow . '</tr>'; 
+			$htmlToShow = $htmlToShow . '</div>'; 
+			
 		}
 	
 	}
-	
-	$htmlToShow = $htmlToShow . '</tbody>';
+	$htmlToShow = $htmlToShow . '<div class="row container">'; 
+	$htmlToShow = $htmlToShow . '<button class="btn_gobacktolist btn btn-outline-success my-2 my-sm-0" type="button">Go back</button>'; 
+	$htmlToShow = $htmlToShow . '</div>'; 
+	//$htmlToShow = $htmlToShow . '</tbody>';
 	echo $htmlToShow;
 ?>
 	

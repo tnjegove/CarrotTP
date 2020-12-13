@@ -160,5 +160,38 @@ $(document).ready(function(){
 		
 		
 	});
+	var recipeList = "";
+	$("#results").on("click",".resultrow", function() {
+		var recipeid = $(this).attr("id");
+		recipeList = $("#listResults").html();
+		$.ajax({
+			type: 'POST',
+			url: 'inc/getRecipeById.php',
+			data: {
+				searchRecipeId: recipeid
+			},
+			success: function(results){
+				
+				$('#listResults').html("");
+				$('#listResults').html(results);
+				
+				
+				
+				
+			},
+			error: function(){
+				alert('Something has gone wrong');
+			}
+		});
+		
+		
+	});
+	
+	$("#results").on("click",".btn_gobacktolist",function() {
+		
+		$('#listResults').html("");
+		$('#listResults').html(recipeList);
+		
+	});
 	
 });

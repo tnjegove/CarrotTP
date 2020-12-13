@@ -33,7 +33,7 @@
 		//use for loop here
 		for ($i=0;$i<count($json["results"]);$i++) {
 
-			$htmlToShow = $htmlToShow . '<div id='.$json["results"][$i]["id"].' class="row">'; 
+			$htmlToShow = $htmlToShow . '<div id='.$json["results"][$i]["id"].' class="row resultrow">'; 
 
 			$htmlToShow = $htmlToShow . '<div class="col-lg-4">' . '<img src="' . $json["results"][$i]["image"] . '"/>'. '</div>';
 			$htmlToShow = $htmlToShow . '<div class="col-lg-4">' . $json["results"][$i]["title"] . '</div>';
@@ -57,7 +57,7 @@
 		//use for loop here
 		for ($i=0;$i<count($json["results"]);$i++) {
 
-			$htmlToShow = $htmlToShow . '<div id='.$json["results"][$i]["id"].' class="row">'; 
+			$htmlToShow = $htmlToShow . '<div id='.$json["results"][$i]["id"].' class="row resultrow">'; 
 
 			$htmlToShow = $htmlToShow . '<div class="col-lg-4">' . '<img src="' . $json["results"][$i]["image"] . '"/>'. '</div>';
 			$htmlToShow = $htmlToShow . '<div class="col-lg-4">' . $json["results"][$i]["title"] . '</div>';
