@@ -35,8 +35,32 @@ $(document).ready(function(){
 	// Meal and Ingredient Button / Darragh O'Brien 
 	
 	$("#btn_searchRecipeNameAndIngredient").click(function() {
+		
+		if ($('#radio-meal-name').is(':checked')) var searchType = 0;
+		if ($('#radio-ingredient-name').is(':checked')) var searchType = 1;
+		if ($('#radio-recipe-id').is(':checked')) var searchType = 2;
+		var searchTerm = $('#searchMeal').val();
+		$.ajax ({
+			type: 'POST',
+			url: 'inc/getRecipeByIngredient.php',
+			data: {
+				searchTerm: searchTerm,
+				searchType: searchType
+			},
+			success: function(results){
+				
+				$('#listResults2').html("");
+				$('#listResults').html(results);
+			},
+			error: function(){
+				alert('Something has gone wrong');
+			}
+			
+		});
+		
+		
 
-		var $searchMeal = $('#searchMeal');
+		/*var $searchMeal = $('#searchMeal');
 		var $searchIngredient = $('#searchIngredient');
 
 		$.ajax({
@@ -53,7 +77,7 @@ $(document).ready(function(){
 			error: function(){
 				alert('Something has gone wrong');
 			}
-		});
+		});*/
 	});
 	
 	// RecipeId button / Darragh O'Brien 

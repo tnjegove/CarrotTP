@@ -108,7 +108,13 @@
 			</div>
 			<div class='col-lg-8'>
 				<input type="text" class="form-control" id="searchMeal" placeholder="Enter meal name">
-				<input type="text" class="form-control" id="searchIngredient" placeholder="Enter ingredient name">
+				<input type="radio" id="radio-meal-name" name="search-type" value="meal-name" checked="checked">
+				<label for="meal-name">Meal name</label>
+				<input type="radio" id="radio-ingredient-name" name="search-type" value="ingredient-name">
+				<label for="ingredient-name">Ingredient name</label>
+				<!--<input type="radio" id="radio-recipe-id" name="search-type" value="recipe-id">
+				<label for="recipe-id">Recipe ID</label> 
+				<input type="text" class="form-control" id="searchIngredient" placeholder="Enter ingredient name">-->
 			</div>
 			<div class='col-lg-2'>
 				<br>
@@ -119,7 +125,7 @@
 		
 		<!-- Enter recipe id / Darragh O'Brien -->
 		
-		<div class='row'>
+		<!--<div class='row'>
 			<div class='col-lg-2'>
 				<label for="formGroupExampleInput">Search recipe id's</label>
 			</div>
@@ -129,7 +135,7 @@
 			<div class='col-lg-2'>
 				<button id='btn_searchRecipeId' class='btn btn-outline-success my-2 my-sm-0' type='button'>Search</button>
 			</div>
-		</div>
+		</div>-->
 		
 		<div class='row' id='white-space'>
 		</div>
@@ -137,10 +143,10 @@
 		<!-- Results/MealAndIngredient / Darragh O'Brien -->
 		
 		<div class='row'>
-			<div class='col-lg-12'>
-				<table id="listResults">
+			<div id="listResults" class='col-lg-12'>
+				<!--<table id="listResults">
 
-				</table>
+				</table>-->
 			</div>
 		</div>
 
