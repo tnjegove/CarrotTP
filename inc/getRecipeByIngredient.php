@@ -5,8 +5,8 @@
 	$searchTerm=$_POST['searchTerm'];
 	$htmlToShow = '
 			<div class="row">
-				<div class="col-lg-4">Image</div>
-				<div class="col-lg-4">Title</div>
+				<div class="col-lg-4 thead">Image</div>
+				<div class="col-lg-4 thead">Title</div>
 				
 			
 			</div>

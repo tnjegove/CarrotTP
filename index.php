@@ -68,35 +68,35 @@
 				<img src="./img/BerryPies.png" class="d-block w-100" alt="...">
 				<div class="carousel-caption d-none d-md-block">
 					<h5>Berry pies</h5>
-					<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+					
 				</div>
 			</div>
 			<div class="carousel-item">
 				<img src="./img/BerryWaffles.png" class="d-block w-100" alt="...">
 				<div class="carousel-caption d-none d-md-block">
 					<h5>Berry waffles</h5>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					
 				</div>
 			</div>
 			<div class="carousel-item">
 				<img src="./img/IceCreamSandwich.png" class="d-block w-100" alt="...">
 				<div class="carousel-caption d-none d-md-block">
 					<h5>Ice Cream Sandwitch</h5>
-					<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+					
 				</div>
 			</div>
 			<div class="carousel-item">
 				<img src="./img/PoachedEggSandwich.png" class="d-block w-100" alt="...">
 				<div class="carousel-caption d-none d-md-block">
 					<h5>Poached egg sandwitch</h5>
-					<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+					
 				</div>
 			</div>
 			<div class="carousel-item">
 				<img src="./img/SquashSoup.png" class="d-block w-100" alt="...">
 				<div class="carousel-caption d-none d-md-block">
 					<h5>Squash soup</h5>
-					<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+					
 				</div>
 			</div>
 		</div>
@@ -124,17 +124,19 @@
 			</div>
 			<div class='col-lg-8'>
 				<input type="text" class="form-control" id="searchMeal" placeholder="Enter meal name">
-				<input type="radio" id="radio-meal-name" name="search-type" value="meal-name" checked="checked">
-				<label for="meal-name">Meal name</label>
-				<input type="radio" id="radio-ingredient-name" name="search-type" value="ingredient-name">
-				<label for="ingredient-name">Ingredient name</label>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" id="radio-meal-name" name="search-type" value="meal-name" checked="checked">
+					<label id="lbl-mealname" class="form-check-label" for="meal-name">Meal name</label>
+					<input class="form-check-input" type="radio" id="radio-ingredient-name" name="search-type" value="ingredient-name">
+					<label class="form-check-label" for="ingredient-name">Ingredient name</label>
+				</div>
 				<!--<input type="radio" id="radio-recipe-id" name="search-type" value="recipe-id">
 				<label for="recipe-id">Recipe ID</label> 
 				<input type="text" class="form-control" id="searchIngredient" placeholder="Enter ingredient name">-->
 			</div>
 			<div class='col-lg-2'>
-				<br>
-				<button id='btn_searchRecipeNameAndIngredient' class='btn btn-outline-success my-2 my-sm-0' type='button'>Search</button>
+				
+				<button id='btn_searchRecipeNameAndIngredient' class='btn btn-outline-success my-2 my-sm-0' type='button'>Search</button><br>
 			</div>		
 		</div>
 		<br>

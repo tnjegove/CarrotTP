@@ -291,4 +291,18 @@ input[type=password]:placeholder {
 	
 }
 
+#lbl-mealname {
+	
+	padding-right: 30px;
+}
+
+.resultrow {
+	margin-bottom: 20px;
+	
+}
+
+.thead {
+	
+	text-align:center;
+}
 
