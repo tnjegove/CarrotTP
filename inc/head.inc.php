@@ -59,7 +59,7 @@
 						";}
 					else {
 						echo "
-							<li class='nav-item'><p>Welcome back, ".$_SESSION['login']."!</p> </li>
+							<li class='nav-item'><p class='nav-link'>Welcome back, ".$_SESSION['login']."!</p> </li>
 							<li class='nav-item'>&nbsp&nbsp&nbsp</li>
 							<li class='nav-item '><a href='inc/signout.php'><button id='btn_signout' class='btn btn-outline-success my-2 my-sm-0' type='submit'><i class='fas fa-sign-out-alt'></i> Sign out</button></a></li>
 						
